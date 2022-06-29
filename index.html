@@ -8,30 +8,63 @@
 
     <title>First-Plus Blockly</title>
 
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css"> -->
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-weight: normal;
+            font-size: 140%;
+        }
+
+        table {
+            height: 100%;
+            width: 100%;
+        }
+
+        #blocklyArea {
+            height: 99%;
+        }
+    </style>
 </head>
 
 <body>
+
     <table>
-        <!-- <tr>
+        <tr>
             <td>
-                <h1>First-Plus Blockly</h1>
+
+
+                <p>FirstPlus Blockly
             </td>
-        </tr> -->
+        </tr>
         <tr>
             <td id="blocklyArea">
             </td>
         </tr>
     </table>
 
-    <div id="blocklyDiv" style="display: none"></div>
+    <div id="blocklyDiv" style="position: absolute"></div>
+
 
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
     <!-- <script src="https://unpkg.com/@blockly/plugin-typed-variable-modal"></script> -->
     <script src="scripts/main.js"></script>
 
+    <script>
+        console.log({ toolbox });
 
+    </script>
 </body>
 
 </html>
