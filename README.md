@@ -2,7 +2,7 @@
 
 ### Considerations
 
-Migrate to server-side dependency for consistency. Currently using generic statements.
+Migrate to specific dependency for consistency. Currently using generic statements that will get latest versions -- not future proof.
 
 ```
 <script src="https://unpkg.com/blockly/blockly.min.js"></script>
