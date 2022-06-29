@@ -357,5 +357,12 @@ const toolbox = {
             'custom': 'PROCEDURE',
             'name': 'Functions',
         },
+        {
+            'kind': 'CATEGORY',
+            'name': 'Sensors',
+            'custom': 'CREATE_SENSOR_CAT',
+            'colour': '123',
+
+        }
     ],
 };
