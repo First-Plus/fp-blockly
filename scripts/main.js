@@ -1,7 +1,7 @@
 var blocklyArea = document.getElementById('blocklyArea');
 var blocklyDiv = document.getElementById('blocklyDiv');
 var workspace = Blockly.inject(blocklyDiv,
-    { 'toolbox': toolbox });
+    { 'toolbox': document.getElementById('toolbox'), });
 var onresize = function (e) {
     // Compute the absolute coordinates and dimensions of blocklyArea.
     var element = blocklyArea;
@@ -24,29 +24,66 @@ onresize();
 Blockly.svgResize(workspace);
 
 
+function myUpdateFunction(event) {
+    var code = Blockly.Python.workspaceToCode(workspace);
+    document.getElementById('codeLine').innerHTML = code;
+}
+workspace.addChangeListener(myUpdateFunction);
 
-const createFlyoutSensor = function (workspace) {
-    let xmlList = [];
-    // Add your button and give it a callback name.
-    const button = document.createElement('button');
-    button.setAttribute('text', 'Create Sensor');
-    button.setAttribute('callbackKey', 'callbackName');
 
-    xmlList.push(button);
+// const createFlyoutSensor = function (workspace) {
+//     let xmlList = [];
+//     // Add your button and give it a callback name.
+//     const button = document.createElement('button');
+//     button.setAttribute('text', 'Create Sensor');
+//     button.setAttribute('callbackKey', 'callbackName');
 
-    // This gets all the variables that the user creates and adds them to the
-    // flyout.
-    const blockList = Blockly.VariablesDynamic.flyoutCategoryBlocks(workspace);
-    xmlList = xmlList.concat(blockList);
-    return xmlList;
-};
+//     xmlList.push(button);
 
-workspace.registerToolboxCategoryCallback('CREATE_SENSOR_CAT', createFlyoutSensor);
+//     // This gets all the variables that the user creates and adds them to the
+//     // flyout.
+//     const blockList = Blockly.VariablesDynamic.flyoutCategoryBlocks(workspace);
+//     xmlList = xmlList.concat(blockList);
+//     return xmlList;
+// };
 
-const typedVarModal = new TypedVariableModal(workspace, 'callbackName',
-    [
-        ["LINE_FOLLOW_SENSOR", "Line Follow Sensor"],
-        ["ULTRASONIC_SENSOR", "Ultrasonic Sensor"],
-        ["ANALOG_SENSOR", "Analog Sensor"]
-    ]);
-typedVarModal.init();
+// workspace.registerToolboxCategoryCallback('CREATE_SENSOR_CAT', createFlyoutSensor);
+
+// const typedVarModalSensor = new TypedVariableModal(workspace, 'callbackName',
+//     [
+//         ["LINE_FOLLOW_SENSOR", "Line Follow Sensor"],
+//         ["ULTRASONIC_SENSOR", "Ultrasonic Sensor"],
+//         ["ANALOG_SENSOR", "Analog Sensor"]
+//     ]);
+// typedVarModalSensor.init();
+
+
+// const createFlyoutMotor = function (workspace) {
+//     let xmlList = [];
+//     // Add your button and give it a callback name.
+//     const button = document.createElement('button');
+//     button.setAttribute('text', 'Create Motor');
+//     button.setAttribute('callbackKey', 'callbackName');
+
+//     xmlList.push(button);
+
+//     // This gets all the variables that the user creates and adds them to the
+//     // flyout.
+//     const blockList = Blockly.VariablesDynamic.flyoutCategoryBlocks(workspace);
+//     xmlList = xmlList.concat(blockList);
+//     xmlList.push({
+//         'kind': 'block',
+//         'type': 'motor_init',
+//     })
+
+//     return xmlList;
+// };
+
+// workspace.registerToolboxCategoryCallback('CREATE_MOTOR_CAT', createFlyoutMotor);
+
+// const typedVarModalMotor = new TypedVariableModal(workspace, 'callbackName',
+//     [
+//         ["M1", "Motor1"],
+//         ["M2", "Motor2"],
+//     ]);
+// typedVarModalMotor.init();
