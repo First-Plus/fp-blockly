@@ -23,10 +23,11 @@ window.addEventListener('resize', onresize, false);
 onresize();
 Blockly.svgResize(workspace);
 
-var workspaceBlocks = document.getElementById("workspaceBlocks");
-
 /* Load blocks to workspace. */
-Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
+var workspaceBlocks = document.getElementById("workspaceBlocks");
+if (workspaceBlocks) {
+    Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
+}
 
 
 function myUpdateFunction(event) {

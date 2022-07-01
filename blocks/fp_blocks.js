@@ -54,13 +54,67 @@ Blockly.Blocks['fp_drivebase'] = {
   }
 };
 
-Blockly.Blocks['fp_motor_pos'] = {
+Blockly.Blocks['fp_drivebase'] = {
   init: function () {
-    this.appendValueInput("NAME")
+    this.appendDummyInput()
+      .appendField("Drivebase:")
+      .appendField(new Blockly.FieldTextInput("myDrivebase"), "NAME");
+    this.appendValueInput("MOTOR_1")
       .setCheck("fp_motor")
-      .appendField("Get Position");
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField("Motor 1");
+    this.appendValueInput("MOTOR_2")
+      .setCheck("fp_motor")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField("Motor 2");
     this.setOutput(true, null);
-    this.setColour(120);
+    this.setColour(210);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['fp_drivebase_effort'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Set Effort");
+    this.appendDummyInput()
+      .appendField("Effort 1:")
+      .appendField(new Blockly.FieldNumber(0, 0, 1), "EFFORT1")
+      .appendField("Effort 2:")
+      .appendField(new Blockly.FieldNumber(0, 0, 1), "EFFORT2");
+    this.appendValueInput("DRIVEBASE")
+      .setCheck("fp_drivebase")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField("Drivebase:");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(290);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['fp_getpos'] = {
+  init: function () {
+    this.appendValueInput("MOTOR")
+      .setCheck("fp_motor")
+      .appendField("Get Motor Position");
+    this.setOutput(true, null);
+    this.setColour(230);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['fp_reset_drivebase'] = {
+  init: function () {
+    this.appendValueInput("DRIVEBASE")
+      .setCheck("fp_drivebase")
+      .appendField("Reset Drivebase Positions");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(160);
     this.setTooltip("");
     this.setHelpUrl("");
   }
