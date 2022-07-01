@@ -48,6 +48,6 @@ Blockly.Python['fp_getpos'] = function (block) {
 
 Blockly.Python['fp_reset_drivebase'] = function (block) {
   var value_drivebase = Blockly.Python.valueToCode(block, 'DRIVEBASE', Blockly.Python.ORDER_ATOMIC);
-  var code = `${value_drivebase}.setPos()`;
+  var code = `${value_drivebase}.setPos()\n`;
   return code;
 };

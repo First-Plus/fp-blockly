@@ -1,0 +1,770 @@
+{
+    "blocks": {
+        "languageVersion": 0,
+        "blocks": [
+            {
+                "type": "variables_set",
+                "id": "w:3JNOQ(!d^L?JDM1LtX",
+                "x": -45,
+                "y": -142,
+                "fields": {
+                    "VAR": {
+                        "id": "tTC3lI%2aP~$_NEr7MQa"
+                    }
+                },
+                "inputs": {
+                    "VALUE": {
+                        "block": {
+                            "type": "fp_encoder",
+                            "id": "M0IB8O[hSMIt1LM%c4Ow",
+                            "fields": {
+                                "NAME": "myEncoder",
+                                "PIN_A": "GP2",
+                                "PIN_B": "GP3",
+                                "REVERSED": false
+                            }
+                        }
+                    }
+                },
+                "next": {
+                    "block": {
+                        "type": "variables_set",
+                        "id": "_@Szm[W_pCyNO;yPzPT$",
+                        "fields": {
+                            "VAR": {
+                                "id": "+V!C=kQ*)E3m:B=4~67Z"
+                            }
+                        },
+                        "inputs": {
+                            "VALUE": {
+                                "block": {
+                                    "type": "fp_encoder",
+                                    "id": "%^E|PFPrD8M,+.o{cK!)",
+                                    "fields": {
+                                        "NAME": "myEncoder",
+                                        "PIN_A": "GP4",
+                                        "PIN_B": "GP5",
+                                        "REVERSED": false
+                                    }
+                                }
+                            }
+                        },
+                        "next": {
+                            "block": {
+                                "type": "variables_set",
+                                "id": ";qWg.2tL:J:B~)5GK|/q",
+                                "fields": {
+                                    "VAR": {
+                                        "id": "7r!{;F=5ny*.~aW5M;:O"
+                                    }
+                                },
+                                "inputs": {
+                                    "VALUE": {
+                                        "block": {
+                                            "type": "fp_motor",
+                                            "id": "~!/.[WAr=6}.oKpzXPR?",
+                                            "fields": {
+                                                "NAME": "myMotor1",
+                                                "PIN_A": "GP8",
+                                                "PIN_B": "GP9",
+                                                "REVERSED": false
+                                            },
+                                            "inputs": {
+                                                "ENCODER": {
+                                                    "block": {
+                                                        "type": "variables_get",
+                                                        "id": "((e)c8:o,+F4U,zd]big",
+                                                        "fields": {
+                                                            "VAR": {
+                                                                "id": "+V!C=kQ*)E3m:B=4~67Z"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "next": {
+                                    "block": {
+                                        "type": "variables_set",
+                                        "id": "Sa.JuQitc8$ST;*Ttg0[",
+                                        "fields": {
+                                            "VAR": {
+                                                "id": "?Kd::R$TnC3Y=*7a9.B)"
+                                            }
+                                        },
+                                        "inputs": {
+                                            "VALUE": {
+                                                "block": {
+                                                    "type": "fp_motor",
+                                                    "id": "xj9zhOhJ3hy]*^*cyv!G",
+                                                    "fields": {
+                                                        "NAME": "myMotor2",
+                                                        "PIN_A": "GP10",
+                                                        "PIN_B": "GP11",
+                                                        "REVERSED": false
+                                                    },
+                                                    "inputs": {
+                                                        "ENCODER": {
+                                                            "block": {
+                                                                "type": "variables_get",
+                                                                "id": "fq]wpH}G,?7p9YGu[Un6",
+                                                                "fields": {
+                                                                    "VAR": {
+                                                                        "id": "tTC3lI%2aP~$_NEr7MQa"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "next": {
+                                            "block": {
+                                                "type": "variables_set",
+                                                "id": "oIKNT+aQPoP,=+;?tI^@",
+                                                "fields": {
+                                                    "VAR": {
+                                                        "id": "!ml:p=,?_Uf0N0=BO2o-"
+                                                    }
+                                                },
+                                                "inputs": {
+                                                    "VALUE": {
+                                                        "block": {
+                                                            "type": "fp_drivebase",
+                                                            "id": "CT5~(pwae)r*o%AlX[I{",
+                                                            "fields": {
+                                                                "NAME": "myDrivebase"
+                                                            },
+                                                            "inputs": {
+                                                                "MOTOR_1": {
+                                                                    "block": {
+                                                                        "type": "variables_get",
+                                                                        "id": "fkl_)*]FBAcYp%nDy^[p",
+                                                                        "fields": {
+                                                                            "VAR": {
+                                                                                "id": "7r!{;F=5ny*.~aW5M;:O"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "MOTOR_2": {
+                                                                    "block": {
+                                                                        "type": "variables_get",
+                                                                        "id": "4^X+J9Pk)s;JDpSw=^wD",
+                                                                        "fields": {
+                                                                            "VAR": {
+                                                                                "id": "?Kd::R$TnC3Y=*7a9.B)"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "controls_repeat_ext",
+                "id": ";LAV;vP|KI/gXMGd!z9!",
+                "x": -6,
+                "y": 263,
+                "inputs": {
+                    "TIMES": {
+                        "shadow": {
+                            "type": "math_number",
+                            "id": "rsY6ek4#;bI9z8/}VC{3",
+                            "fields": {
+                                "NUM": 4
+                            }
+                        }
+                    },
+                    "DO": {
+                        "block": {
+                            "type": "controls_whileUntil",
+                            "id": "5xj3:28I1j%v0oaIdk`7",
+                            "fields": {
+                                "MODE": "WHILE"
+                            },
+                            "inputs": {
+                                "BOOL": {
+                                    "block": {
+                                        "type": "logic_compare",
+                                        "id": "*lwRk#`LQu[m!eaj]@[r",
+                                        "fields": {
+                                            "OP": "LT"
+                                        },
+                                        "inputs": {
+                                            "A": {
+                                                "block": {
+                                                    "type": "procedures_callreturn",
+                                                    "id": "p;J@I3U}=F7DV3;9*Pg{",
+                                                    "extraState": {
+                                                        "name": "getAverageMotorPosition"
+                                                    }
+                                                }
+                                            },
+                                            "B": {
+                                                "block": {
+                                                    "type": "math_number",
+                                                    "id": "Ge|YEl[Wg5Jn|]s1s;v5",
+                                                    "fields": {
+                                                        "NUM": 3
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "DO": {
+                                    "block": {
+                                        "type": "controls_if",
+                                        "id": "V,hsZsYG^pAAyA7xVEh6",
+                                        "extraState": {
+                                            "hasElse": true
+                                        },
+                                        "inputs": {
+                                            "IF0": {
+                                                "block": {
+                                                    "type": "logic_compare",
+                                                    "id": "$cmOClnD+r5IpgRnxs#Z",
+                                                    "fields": {
+                                                        "OP": "GT"
+                                                    },
+                                                    "inputs": {
+                                                        "A": {
+                                                            "block": {
+                                                                "type": "fp_getpos",
+                                                                "id": "vCJTn!?),F_fsVQlhJ/~",
+                                                                "inputs": {
+                                                                    "MOTOR": {
+                                                                        "block": {
+                                                                            "type": "variables_get",
+                                                                            "id": "OX|NXiXsHsUd7Ia$Uf}N",
+                                                                            "fields": {
+                                                                                "VAR": {
+                                                                                    "id": "7r!{;F=5ny*.~aW5M;:O"
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "B": {
+                                                            "block": {
+                                                                "type": "fp_getpos",
+                                                                "id": "/]FFmg,6U4Cz^E$HKKiY",
+                                                                "inputs": {
+                                                                    "MOTOR": {
+                                                                        "block": {
+                                                                            "type": "variables_get",
+                                                                            "id": "4m-D^M+-u$)Ly5EKWJBa",
+                                                                            "fields": {
+                                                                                "VAR": {
+                                                                                    "id": "?Kd::R$TnC3Y=*7a9.B)"
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "DO0": {
+                                                "block": {
+                                                    "type": "fp_drivebase_effort",
+                                                    "id": "l-h`L,GH#BE^0L)yS(aS",
+                                                    "fields": {
+                                                        "EFFORT1": 1,
+                                                        "EFFORT2": 0
+                                                    },
+                                                    "inputs": {
+                                                        "DRIVEBASE": {
+                                                            "block": {
+                                                                "type": "variables_get",
+                                                                "id": "}iVkRY/9:br].S*h5kA!",
+                                                                "fields": {
+                                                                    "VAR": {
+                                                                        "id": "!ml:p=,?_Uf0N0=BO2o-"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "ELSE": {
+                                                "block": {
+                                                    "type": "fp_drivebase_effort",
+                                                    "id": "MTeexLDP(ZO/jd=@=ft1",
+                                                    "fields": {
+                                                        "EFFORT1": 0,
+                                                        "EFFORT2": 1
+                                                    },
+                                                    "inputs": {
+                                                        "DRIVEBASE": {
+                                                            "block": {
+                                                                "type": "variables_get",
+                                                                "id": "S/s{p2%=yg1(,#6G^%!.",
+                                                                "fields": {
+                                                                    "VAR": {
+                                                                        "id": "!ml:p=,?_Uf0N0=BO2o-"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "next": {
+                                "block": {
+                                    "type": "fp_reset_drivebase",
+                                    "id": "[:8F8_U2Mc=%X4Ym6(0(",
+                                    "inputs": {
+                                        "DRIVEBASE": {
+                                            "block": {
+                                                "type": "variables_get",
+                                                "id": "qed:p}?i.TDi`Qo^7o@t",
+                                                "fields": {
+                                                    "VAR": {
+                                                        "id": "!ml:p=,?_Uf0N0=BO2o-"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "next": {
+                                        "block": {
+                                            "type": "controls_whileUntil",
+                                            "id": "-hA=5g~]5bABdK6NcQFI",
+                                            "fields": {
+                                                "MODE": "WHILE"
+                                            },
+                                            "inputs": {
+                                                "BOOL": {
+                                                    "block": {
+                                                        "type": "logic_compare",
+                                                        "id": "foPInJb8v-dRU1bBCHz@",
+                                                        "fields": {
+                                                            "OP": "LT"
+                                                        },
+                                                        "inputs": {
+                                                            "A": {
+                                                                "block": {
+                                                                    "type": "math_on_list",
+                                                                    "id": "zcN=pRd_KSMv}3B.1USM",
+                                                                    "extraState": "<mutation op=\"AVERAGE\"></mutation>",
+                                                                    "fields": {
+                                                                        "OP": "AVERAGE"
+                                                                    },
+                                                                    "inputs": {
+                                                                        "LIST": {
+                                                                            "block": {
+                                                                                "type": "lists_create_with",
+                                                                                "id": "_=4I42_o|Gs4PLP4~fWg",
+                                                                                "extraState": {
+                                                                                    "itemCount": 2
+                                                                                },
+                                                                                "inputs": {
+                                                                                    "ADD0": {
+                                                                                        "block": {
+                                                                                            "type": "math_arithmetic",
+                                                                                            "id": "L%Y(/kGeF0X:iZ:18ek+",
+                                                                                            "fields": {
+                                                                                                "OP": "MULTIPLY"
+                                                                                            },
+                                                                                            "inputs": {
+                                                                                                "A": {
+                                                                                                    "shadow": {
+                                                                                                        "type": "math_number",
+                                                                                                        "id": "sD`IH1rE[n8LOlqVXiNh",
+                                                                                                        "fields": {
+                                                                                                            "NUM": 1
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "block": {
+                                                                                                        "type": "math_number",
+                                                                                                        "id": "$mbe67fS~gV?PNR/GMZk",
+                                                                                                        "fields": {
+                                                                                                            "NUM": -1
+                                                                                                        }
+                                                                                                    }
+                                                                                                },
+                                                                                                "B": {
+                                                                                                    "shadow": {
+                                                                                                        "type": "math_number",
+                                                                                                        "id": "_m+G5a5oq!8V+{QT.(1W",
+                                                                                                        "fields": {
+                                                                                                            "NUM": 1
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "block": {
+                                                                                                        "type": "fp_getpos",
+                                                                                                        "id": "3#,LB!tR;L=%L%xPF.#v",
+                                                                                                        "inputs": {
+                                                                                                            "MOTOR": {
+                                                                                                                "block": {
+                                                                                                                    "type": "variables_get",
+                                                                                                                    "id": "oCs}te`Qp;_$cmlgHG4*",
+                                                                                                                    "fields": {
+                                                                                                                        "VAR": {
+                                                                                                                            "id": "7r!{;F=5ny*.~aW5M;:O"
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    "ADD1": {
+                                                                                        "block": {
+                                                                                            "type": "fp_getpos",
+                                                                                            "id": "~2`GK/M0$0l,I#BwT9-E",
+                                                                                            "inputs": {
+                                                                                                "MOTOR": {
+                                                                                                    "block": {
+                                                                                                        "type": "variables_get",
+                                                                                                        "id": "xqNXoO@,AbBCTxyi`pr~",
+                                                                                                        "fields": {
+                                                                                                            "VAR": {
+                                                                                                                "id": "?Kd::R$TnC3Y=*7a9.B)"
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "B": {
+                                                                "block": {
+                                                                    "type": "math_number",
+                                                                    "id": "tud]AqFaG(EH`0.dZo*^",
+                                                                    "fields": {
+                                                                        "NUM": 0.66
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "DO": {
+                                                    "block": {
+                                                        "type": "controls_if",
+                                                        "id": "%E+`p0^!V=/D!}0wdWuu",
+                                                        "extraState": {
+                                                            "hasElse": true
+                                                        },
+                                                        "inputs": {
+                                                            "IF0": {
+                                                                "block": {
+                                                                    "type": "logic_compare",
+                                                                    "id": "P!aS,wTJGTdV3j8x(PSH",
+                                                                    "fields": {
+                                                                        "OP": "GT"
+                                                                    },
+                                                                    "inputs": {
+                                                                        "A": {
+                                                                            "block": {
+                                                                                "type": "math_arithmetic",
+                                                                                "id": "Pr$}pak:+7ng?:ejuRA/",
+                                                                                "fields": {
+                                                                                    "OP": "MULTIPLY"
+                                                                                },
+                                                                                "inputs": {
+                                                                                    "A": {
+                                                                                        "shadow": {
+                                                                                            "type": "math_number",
+                                                                                            "id": "sD`IH1rE[n8LOlqVXiNh",
+                                                                                            "fields": {
+                                                                                                "NUM": 1
+                                                                                            }
+                                                                                        },
+                                                                                        "block": {
+                                                                                            "type": "math_number",
+                                                                                            "id": "NFSvYah-sHQ/8l?3^_Ti",
+                                                                                            "fields": {
+                                                                                                "NUM": -1
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    "B": {
+                                                                                        "shadow": {
+                                                                                            "type": "math_number",
+                                                                                            "id": "_m+G5a5oq!8V+{QT.(1W",
+                                                                                            "fields": {
+                                                                                                "NUM": 1
+                                                                                            }
+                                                                                        },
+                                                                                        "block": {
+                                                                                            "type": "fp_getpos",
+                                                                                            "id": "[g/ki`So03t%)1eXN8}]",
+                                                                                            "inputs": {
+                                                                                                "MOTOR": {
+                                                                                                    "block": {
+                                                                                                        "type": "variables_get",
+                                                                                                        "id": "psSu+@`Ua4ut?fz^(T5i",
+                                                                                                        "fields": {
+                                                                                                            "VAR": {
+                                                                                                                "id": "7r!{;F=5ny*.~aW5M;:O"
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "B": {
+                                                                            "block": {
+                                                                                "type": "fp_getpos",
+                                                                                "id": "?MU8PqG_tDsQ.Z+l-@.K",
+                                                                                "inputs": {
+                                                                                    "MOTOR": {
+                                                                                        "block": {
+                                                                                            "type": "variables_get",
+                                                                                            "id": "r)u(2mwJ().v@e}d@[!@",
+                                                                                            "fields": {
+                                                                                                "VAR": {
+                                                                                                    "id": "?Kd::R$TnC3Y=*7a9.B)"
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "DO0": {
+                                                                "block": {
+                                                                    "type": "fp_drivebase_effort",
+                                                                    "id": "3}rr34Bxt5;t]u9t8;M#",
+                                                                    "fields": {
+                                                                        "EFFORT1": 0,
+                                                                        "EFFORT2": 1
+                                                                    },
+                                                                    "inputs": {
+                                                                        "DRIVEBASE": {
+                                                                            "block": {
+                                                                                "type": "variables_get",
+                                                                                "id": ":ASO.ogoNV*HpB.3ZjD/",
+                                                                                "fields": {
+                                                                                    "VAR": {
+                                                                                        "id": "!ml:p=,?_Uf0N0=BO2o-"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "ELSE": {
+                                                                "block": {
+                                                                    "type": "fp_drivebase_effort",
+                                                                    "id": "Z~BLnPQmu)!(DSyG3}o7",
+                                                                    "fields": {
+                                                                        "EFFORT1": 0.5,
+                                                                        "EFFORT2": 0
+                                                                    },
+                                                                    "inputs": {
+                                                                        "DRIVEBASE": {
+                                                                            "block": {
+                                                                                "type": "variables_get",
+                                                                                "id": "kE:),4yRmd{79TThbh?T",
+                                                                                "fields": {
+                                                                                    "VAR": {
+                                                                                        "id": "!ml:p=,?_Uf0N0=BO2o-"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "next": {
+                                                "block": {
+                                                    "type": "fp_reset_drivebase",
+                                                    "id": "7e[8|#54rAL2Usw5G0LE",
+                                                    "inputs": {
+                                                        "DRIVEBASE": {
+                                                            "block": {
+                                                                "type": "variables_get",
+                                                                "id": "@:km^Nnmu6Y[Qquc4/}a",
+                                                                "fields": {
+                                                                    "VAR": {
+                                                                        "id": "!ml:p=,?_Uf0N0=BO2o-"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "procedures_defreturn",
+                "id": "1VnyMuq!C~M`Cxk~Xc2a",
+                "x": -68,
+                "y": 116,
+                "icons": {
+                    "comment": {
+                        "text": "Describe this function...",
+                        "pinned": false,
+                        "height": 80,
+                        "width": 160
+                    }
+                },
+                "fields": {
+                    "NAME": "getAverageMotorPosition"
+                },
+                "inputs": {
+                    "RETURN": {
+                        "block": {
+                            "type": "math_arithmetic",
+                            "id": "umf!@3LC;}E:Z)0A/x3/",
+                            "fields": {
+                                "OP": "DIVIDE"
+                            },
+                            "inputs": {
+                                "A": {
+                                    "shadow": {
+                                        "type": "math_number",
+                                        "id": "%C%3LVQCcJLSbBJ5H!5O",
+                                        "fields": {
+                                            "NUM": 1
+                                        }
+                                    },
+                                    "block": {
+                                        "type": "math_arithmetic",
+                                        "id": "kd^-R[PlO2Dcu*p8(,$s",
+                                        "fields": {
+                                            "OP": "ADD"
+                                        },
+                                        "inputs": {
+                                            "A": {
+                                                "block": {
+                                                    "type": "fp_getpos",
+                                                    "id": "d)Fl,?VhZ^B:0s1(JyIs",
+                                                    "inputs": {
+                                                        "MOTOR": {
+                                                            "block": {
+                                                                "type": "variables_get",
+                                                                "id": "sVMoKl@|2%**9a9R.9$p",
+                                                                "fields": {
+                                                                    "VAR": {
+                                                                        "id": "7r!{;F=5ny*.~aW5M;:O"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "B": {
+                                                "block": {
+                                                    "type": "fp_getpos",
+                                                    "id": "%z~sXbp~vJcQ((83o%t(",
+                                                    "inputs": {
+                                                        "MOTOR": {
+                                                            "block": {
+                                                                "type": "variables_get",
+                                                                "id": "2Gs:MS+Z)TPmVB-+xptZ",
+                                                                "fields": {
+                                                                    "VAR": {
+                                                                        "id": "?Kd::R$TnC3Y=*7a9.B)"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "B": {
+                                    "shadow": {
+                                        "type": "math_number",
+                                        "id": "Me=+EfyezM/=nv0UiIR]",
+                                        "fields": {
+                                            "NUM": 2
+                                        }
+                                    },
+                                    "block": {
+                                        "type": "math_number",
+                                        "id": "=vl(P_A5uijy(e[/1].I",
+                                        "fields": {
+                                            "NUM": 2
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "variables": [
+        {
+            "name": "encoderR",
+            "id": "tTC3lI%2aP~$_NEr7MQa"
+        },
+        {
+            "name": "encoderL",
+            "id": "+V!C=kQ*)E3m:B=4~67Z"
+        },
+        {
+            "name": "motor1",
+            "id": "7r!{;F=5ny*.~aW5M;:O"
+        },
+        {
+            "name": "motor2",
+            "id": "?Kd::R$TnC3Y=*7a9.B)"
+        },
+        {
+            "name": "drivebase",
+            "id": "!ml:p=,?_Uf0N0=BO2o-"
+        }
+    ]
+}
