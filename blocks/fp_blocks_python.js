@@ -41,8 +41,13 @@ Blockly.Python['fp_drivebase_effort'] = function (block) {
 
 Blockly.Python['fp_getpos'] = function (block) {
   var value_name = Blockly.Python.valueToCode(block, 'NAME', Blockly.Python.ORDER_ATOMIC);
-  // TODO: Assemble Python into code variable.
   var code = `${value_name}.getPos()`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Python.ORDER_NONE];
+};
+
+Blockly.Python['fp_reset_drivebase'] = function (block) {
+  var value_drivebase = Blockly.Python.valueToCode(block, 'DRIVEBASE', Blockly.Python.ORDER_ATOMIC);
+  var code = `${value_drivebase}.setPos()`;
+  return code;
 };
