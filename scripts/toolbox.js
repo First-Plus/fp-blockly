@@ -363,6 +363,12 @@ const toolbox = {
             'custom': 'CREATE_SENSOR_CAT',
             'colour': '123',
 
+        },
+        {
+            'kind': 'CATEGORY',
+            'name': 'Motors',
+            'custom': 'CREATE_MOTOR_CAT',
+            'colour': '42',
         }
     ],
 };
