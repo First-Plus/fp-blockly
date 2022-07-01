@@ -35,12 +35,13 @@ Blockly.Python['fp_drivebase_effort'] = function (block) {
   var number_effort1 = block.getFieldValue('EFFORT1');
   var number_effort2 = block.getFieldValue('EFFORT2');
   var value_drivebase = Blockly.Python.valueToCode(block, 'DRIVEBASE', Blockly.Python.ORDER_ATOMIC);
-  var code = `${value_drivebase}.setEffort(${number_effort1}, ${number_effort2})`;;
+  var code = `${value_drivebase}.setEffort(${number_effort1}, ${number_effort2})\n`;;
   return code;
 };
 
 Blockly.Python['fp_getpos'] = function (block) {
-  var value_name = Blockly.Python.valueToCode(block, 'NAME', Blockly.Python.ORDER_ATOMIC);
+  // Get the name of the connect motor block
+  var value_name = Blockly.Python.valueToCode(block, 'MOTOR', Blockly.Python.ORDER_ATOMIC);
   var code = `${value_name}.getPos()`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Python.ORDER_NONE];
