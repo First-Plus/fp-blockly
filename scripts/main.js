@@ -32,10 +32,20 @@ if (workspaceBlocks) {
 
 function myUpdateFunction(event) {
     var code = Blockly.Python.workspaceToCode(workspace);
+    processCode(code);
     document.getElementById('codeLine').innerHTML = code;
 }
-workspace.addChangeListener(myUpdateFunction);
+// workspace.addChangeListener(myUpdateFunction);
 
+
+/* Code Cleaning and Formatting */
+function processCode(code) {
+    console.log("Processing Code");
+    if (code.includes('encoded_motor')) {
+        console.log("Found encoded_motor");
+    }
+    // TODO: Add code cleaning and formatting here
+}
 
 // const createFlyoutSensor = function (workspace) {
 //     let xmlList = [];
