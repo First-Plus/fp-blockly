@@ -14,8 +14,7 @@ Blockly.Python['fp_motor'] = function (block) {
   var dropdown_pin_b = block.getFieldValue('PIN_B');
   var checkbox_reversed = block.getFieldValue('REVERSED') === 'TRUE';
   var value_encoder = Blockly.Python.valueToCode(block, 'ENCODER', Blockly.Python.ORDER_ATOMIC);
-  var value_encoder = Blockly.Python.valueToCode(block, 'ENCODER', Blockly.Python.ORDER_ATOMIC);
-  var code = `em.encoded_motor(encL, board.${dropdown_pin_a}, board.${dropdown_pin_b}, ${text_name}, doFlip=${checkbox_reversed ? 'True' : 'False'})`;
+  var code = `em.encoded_motor(${value_encoder}, board.${dropdown_pin_a}, board.${dropdown_pin_b}, ${text_name}, doFlip=${checkbox_reversed ? 'True' : 'False'})`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Python.ORDER_NONE];
 };
