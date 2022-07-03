@@ -37,14 +37,14 @@
         } */
 
     #blocklyArea {
-      /* height: 99%; */
-      height: 66%;
-      /* width: 66%; */
+      height: 99%;
+      /* height: 66%; */
+      width: 66%;
     }
 
     #textArea {
-      height: 33%;
-      /* width: 33%; */
+      height: 99%;
+      width: 33%;
     }
   </style>
 
@@ -63,22 +63,17 @@
 <body>
 
 
-
   <table>
-
     <tr>
-      <td id="blocklyArea">
+      <td id="blocklyArea" style = "width:66%">
+        <div id="blocklyDiv"></div>
+      </td>
+      <td id="textArea">
+        <pre style="height:99%; overflow:scroll;"><code id="codeLine" class="python"></code>
       </td>
     </tr>
-    </tr>
-    <td id="textArea">
-      <pre><code id="codeLine" class="python"></code>
+  </table>
 
-            </td>
-        </tr>
-    </table>
-
-    <div id="blocklyDiv" style="position: absolute"></div>
 
     <!-- <script src="scripts/toolbox.js"></script> -->
     <!-- <xml src="toolbox.xml" id="toolbox"></xml> -->
