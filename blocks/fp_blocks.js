@@ -80,9 +80,9 @@ Blockly.Blocks['fp_drivebase_effort'] = {
       .appendField("Set Effort");
     this.appendDummyInput()
       .appendField("Effort 1:")
-      .appendField(new Blockly.FieldNumber(0, 0, 1), "EFFORT1")
+      .appendField(new Blockly.FieldNumber(0, -1, 1), "EFFORT1")
       .appendField("Effort 2:")
-      .appendField(new Blockly.FieldNumber(0, 0, 1), "EFFORT2");
+      .appendField(new Blockly.FieldNumber(0, -1, 1), "EFFORT2");
     this.appendValueInput("DRIVEBASE")
       .setCheck("fp_drivebase")
       .setAlign(Blockly.ALIGN_RIGHT)
