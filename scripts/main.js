@@ -48,7 +48,7 @@ function myUpdateFunction(event) {
     processCode(code);
     document.getElementById('codeLine').innerHTML = code;
 }
-// workspace.addChangeListener(myUpdateFunction);
+workspace.addChangeListener(myUpdateFunction);
 
 
 /* Code Cleaning and Formatting */
